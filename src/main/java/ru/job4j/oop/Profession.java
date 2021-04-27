@@ -1,24 +1,35 @@
 package ru.job4j.oop;
 
 public class Profession {
-    private String name;
-    private String surname;
-    private String education;
-    private String birthday;
+    public String name;
+    public String surname;
+    public String education;
+    public String birthday;
 
-    public String getName(String name) {
+    public Profession() {
+    }
+
+    public Profession(String name, String surname, String education, String birthday) {
+        this.name = name;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
+
+    }
+
+    public getName(String name) {
         this.name = name;
     }
 
-    public String getSurname(String surname) {
+    public getSurname(String surname) {
         this.surname = surname;
     }
 
-    public String getEducation(String education){
+    public getEducation(String education) {
         this.education = education;
     }
 
-    public String getBirthday(String birthday){
+    public getBirthday(String birthday) {
         this.birthday = birthday;
     }
 }

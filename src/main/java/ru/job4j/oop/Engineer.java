@@ -4,11 +4,12 @@ public class Engineer extends  Profession {
     private int experience;
     private String certification;
 
-     public int getExperience(int experience){
+     public Engineer(String name, String surname, String education, String birthday, String certification, int experience){
+         super(name, surname, education, birthday);
+         this.certification = certification;
          this.experience = experience;
      }
 
-     public String getCertification(String certification){
-         this.certification = certification;
-     }
+
+
 }
