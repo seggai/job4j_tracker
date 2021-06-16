@@ -9,7 +9,7 @@ public class Config {
         this.name = name;
     }
 
-    void print() {
+    public print() {
         System.out.println(position);
     }
 
