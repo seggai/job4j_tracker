@@ -11,6 +11,7 @@ public class Config {
 
     public print() {
         System.out.println(position);
+
     }
 
     public String getProperty(String key) {

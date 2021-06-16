@@ -1,4 +1,4 @@
-package ru.job4j.oop;
+package ru.job4j.prof;
 
 public class Surgeon extends Doctor{
     private String pacient;
