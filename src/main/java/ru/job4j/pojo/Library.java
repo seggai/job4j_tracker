@@ -11,22 +11,19 @@ public class Library {
         books[1] = kek;
         books[2] = lol;
         books[3] = cleanCode;
-        for(int index = 0; index < books.length; index++) {
-            Book write = books[index];
+        for(Book write: books) {
             System.out.println(write.getName() + " - " + write.getPages());
         }
         Book change = books[0];
         books[0] = books[3];
         books[3] = change;
         System.out.println("Change [0] with [3]:");
-        for(int index = 0; index < books.length; index++) {
-            Book write = books[index];
+        for(Book write: books) {
             System.out.println(write.getName() + " - " + write.getPages());
         }
-        for(int index = 0; index < books.length; index++) {
-            Book write2 = books[index];
-            if(write2.getName() == "Clean code") {
-                System.out.println(write2.getName() + " - " + write2.getPages());
+        for(Book write: books) {
+            if(write.getName().equals("Clean code")) {
+                System.out.println(write.getName() + " - " + write.getPages());
             }
         }
     }
