@@ -29,18 +29,6 @@ public class License {
         return code;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        License license = (License) o;
-        return Objects.equals(owner, license.owner) && Objects.equals(model, license.model) && code.equals(license.code) && Objects.equals(created, license.created);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(owner, model, code, created);
-    }
 
     public void setCode(String code) {
         this.code = code;
@@ -52,6 +40,18 @@ public class License {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        License license = (License) o;
+        return Objects.equals(owner, license.owner) && Objects.equals(model, license.model) && code.equals(license.code) && Objects.equals(created, license.created);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(owner, model, code, created);
     }
 
 }
