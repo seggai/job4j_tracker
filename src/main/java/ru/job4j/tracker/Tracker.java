@@ -1,29 +1,56 @@
-//package ru.job4j.tracker;
-//
-//public class Tracker {
-//    private final Item[] items = new Item[100];
-//    private int ids = 1;
-//    private int size = 0;
-//
-//    public Item add(Item item) {
-//        item.setId(generateId());
-//        items[size++] = item;
-//        return item;
-//    }
-//
-//    private String generateId() {
-//        return String.valueOf(ids++);
-//    }
-//
-//    public Item findById(String id) {
-//        Item rsl = null;
-//        for (int index = 0; index < size; index++) {
-//            Item item = items[index];
-//            if (item.getId().equals(id)) {
-//                rsl = item;
-//                break;
-//            }
-//        }
-//        return rsl;
-//    }
-//}
+package ru.job4j.tracker;
+
+import java.util.Arrays;
+
+public class Tracker {
+    private final Item[] items = new Item[100];
+    private int ids = 1;
+    private int size = 0;
+
+    public Item add(Item item) {
+        item.setId(ids++);
+        items[size++] = item;
+        return item;
+    }
+
+    public Item findById(int id) {
+        Item rsl = null;
+        for (int index = 0; index < size; index++) {
+            Item item = items[index];
+            if (item.getId() == id) {
+                rsl = item;
+                break;
+            }
+        }
+        return rsl;
+    }
+
+    public Item[] findByName(String key) {
+        int sizeNew = 0;
+        Item[] searchArray = new Item[size];
+        for (int i = 0; i < size; i++) {
+            if(items[i].getName() == key) {
+                searchArray[sizeNew] = items[i];
+                sizeNew++;
+            }
+        }
+        searchArray = Arrays.copyOf(searchArray, sizeNew);
+        return searchArray;
+
+    }
+
+    public Item[] findAll() {
+        int newSize = 0;
+        Item[] newArray = new Item[size];
+        for (int i = 0; i < size; i++) {
+            Item item = items[i];
+            if(item != null) {
+                newArray[newSize] = item;
+                newSize++;
+            }
+        }
+        newArray = Arrays.copyOf(newArray, newSize);
+        return newArray;
+    }
+
+}
