@@ -12,19 +12,9 @@ public class Matches {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
-            if (matches <= count && matches > 0 && matches < 4) {
+            if (matches > 0 && matches < 4) {
                 turn = !turn;
-                switch (matches) {
-                    case 1:
-                        System.out.println(count = count - matches);
-                        break;
-                    case 2:
-                        System.out.println(count = count - matches);
-                        break;
-                    default:
-                        System.out.println(count = count - matches);
-                        break;
-                }
+                System.out.println(count = count - matches);
             } else {
                 System.out.println("Введено неверное кол-во спичек, повторите ввод");
             }
