@@ -14,7 +14,8 @@ public class Matches {
             int matches = Integer.parseInt(input.nextLine());
             if (matches > 0 && matches < 4) {
                 turn = !turn;
-                System.out.println(count = count - matches);
+                count = count - matches;
+                System.out.println(count);
             } else {
                 System.out.println("Введено неверное кол-во спичек, повторите ввод");
             }
