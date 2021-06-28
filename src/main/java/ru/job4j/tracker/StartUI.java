@@ -36,7 +36,6 @@ public class StartUI {
                 System.out.println("Enter the name of the replaced item: ");
                 String name = scanner.nextLine();
                 Item newItem = new Item(name);
-                tracker.replace(id, newItem);
                 if (tracker.replace(id, newItem)) {
                     System.out.println("Success");
                 } else {
@@ -48,7 +47,6 @@ public class StartUI {
                 System.out.println("Enter id of deleting item: ");
                 id = Integer.parseInt(scanner.nextLine());
                 if (tracker.delete(id)) {
-                    tracker.delete(id);
                     System.out.println("Success");
                 } else {
                     System.out.println("Failure");
