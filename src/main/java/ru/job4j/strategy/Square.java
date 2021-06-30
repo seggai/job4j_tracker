@@ -9,10 +9,6 @@ public class Square implements Shape{
                 + "|        |" + ln
                 + "|________|" + ln;
     }
-
-    public static void main(String[] args) {
-        System.out.println(new Triangle().draw());
-    }
 }
 
 
