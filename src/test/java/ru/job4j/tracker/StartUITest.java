@@ -115,12 +115,12 @@ public class StartUITest {
         Item y = new Item("azaza");
         tracker.add(x);
         tracker.add(y);
-        Input in = new StubInput( new String[] {"0", "azaza", "1"});
+        Input in = new StubInput( new String[] {"0", y.getName(), "1"});
         UserAction[] actions = { new FindByNameAction(out), new ExitAction()};
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is("Menu:" + System.lineSeparator() +"0. Find items by name" + System.lineSeparator() + "1. Exit" +
                 System.lineSeparator() + "=== Find items by name ===" +
-                System.lineSeparator() + "Item{id=2, name='azaza'}" + System.lineSeparator() +
+                System.lineSeparator() + y + System.lineSeparator() +
                 "Menu:" + System.lineSeparator() +"0. Find items by name" + System.lineSeparator() + "1. Exit" + System.lineSeparator()));
     }
 }
