@@ -15,7 +15,7 @@ public class Item {
     public Item(String name) {
         this.name = name;
     }
-   public Item(int id){
+   public Item(int id) {
         this.id = id;
    }
 
@@ -47,8 +47,8 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "id=" + id +
+        return "Item{"
+                + "id=" + id +
                 ", name='" + name + '\'' +
                 ", created=" + created +
                 '}';
